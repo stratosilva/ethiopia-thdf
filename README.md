@@ -2,16 +2,18 @@
 
 This repository contains a single‑page web portal for collecting **Traveler Health Declarations** and syncing them with **DHIS2 Tracker**. The portal is a thin client: it reads/writes travelers (TEIs), enrollments, and events directly to DHIS2 via the Tracker API v40. All analytics and risk classification logic live in DHIS2.
 
-> TL;DR
-> - **New submission**: create/update a traveler and post Travel + Clinical events.
-> - **Edit a current declaration**: find and update an in‑progress declaration.
-> - **Get my QR code**: render a QR with traveler identifiers and risk classification (optionally signed & compressed).
-> - **Powered by DHIS2**: means that certain metadata in this web comes from DHIS2.
-   - Countries visited in the last 21 days is mapped to an Option Group
-   - Clinical data step in the declaraion is mapped to Pre‑Clinical program stage.
-   - Risk classification is done using 3 program rules.
-   But it also means that data is stored in the same DHIS2 server, which acts as the backend.
-> - **Duplicate protection**: blocks new submissions when a current/future arrival already exists; redirects to Edit.
+Here’s a clean, fixed snippet you can paste in:
+
+* **New submission:** create or update a traveler, then post Travel + Clinical events.
+* **Edit a current declaration:** find and update an in-progress declaration.
+* **Get my QR code:** render a QR with traveler identifiers and risk classification (optionally signed & compressed).
+* **Powered by DHIS2:** the UI and logic are driven by DHIS2 metadata, and all data is stored in DHIS2 (which also powers analytics).
+
+   * “Countries visited in the last 21 days” comes from a DHIS2 **Option Group**.
+   * The **Clinical** step maps to the **Pre-Clinical Data** program stage.
+   * **Risk classification** is assigned by three DHIS2 **Program Rules** (GREEN / YELLOW / RED).
+* **Duplicate protection:** blocks new submissions when a current/future arrival already exists, and offers to continue in **Edit**.
+
 
 ---
 
