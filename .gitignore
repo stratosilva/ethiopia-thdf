@@ -1,0 +1,15 @@
+# Build and dependancies
+node_modules/
+dist/
+.cache/
+*.log
+
+# Env variables
+.env
+.env.*
+
+# SO / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
